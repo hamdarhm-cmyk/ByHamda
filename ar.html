@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BY HAMDA | منتجات رقمية</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Tahoma, Arial, sans-serif;
+background: #f8f5f0;
+color: #1f1f1f;
+line-height: 1.8;
+}
+
+a {
+color: inherit;
+}
+
+.container {
+width: min(1120px, 92%);
+margin: auto;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.navbar {
+background: rgba(255, 253, 249, 0.97);
+border-bottom: 1px solid #ece6de;
+position: sticky;
+top: 0;
+z-index: 1000;
+backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 18px 0;
+}
+
+.logo {
+font-size: 24px;
+letter-spacing: 5px;
+font-weight: 700;
+text-decoration: none;
+direction: ltr;
+white-space: nowrap;
+}
+
+.nav-right {
+display: flex;
+align-items: center;
+gap: 24px;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 25px;
+}
+
+.nav-links a {
+text-decoration: none;
+font-size: 14px;
+transition: 0.2s;
+}
+
+.nav-links a:hover {
+opacity: 0.55;
+}
+
+.language-switch {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+text-decoration: none;
+border: 1px solid #cfc6bc;
+background: #f6f1eb;
+padding: 9px 16px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 600;
+transition: 0.25s;
+white-space: nowrap;
+direction: ltr;
+}
+
+.language-switch:hover {
+background: #1f1f1f;
+color: white;
+border-color: #1f1f1f;
+transform: translateY(-1px);
+}
+
+.language-icon {
+font-size: 15px;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+background:
+linear-gradient(
+rgba(241, 233, 223, 0.72),
+rgba(241, 233, 223, 0.72)
+),
+url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1600&q=80');
+
+background-size: cover;
+background-position: center;
+min-height: 78vh;
+display: flex;
+align-items: center;
+}
+
+.hero-content {
+max-width: 650px;
+padding: 80px 0;
+}
+
+.eyebrow {
+letter-spacing: 2px;
+font-size: 12px;
+margin-bottom: 16px;
+color: #6e675f;
+}
+
+.hero h1 {
+font-family: Georgia, Tahoma, serif;
+font-size: clamp(45px, 6vw, 72px);
+font-weight: 400;
+line-height: 1.35;
+margin-bottom: 22px;
+}
+
+.hero p {
+font-size: 18px;
+max-width: 560px;
+color: #5f5a55;
+margin-bottom: 30px;
+}
+
+.primary-btn {
+display: inline-block;
+background: #1f1f1f;
+color: white;
+text-decoration: none;
+padding: 15px 28px;
+border-radius: 999px;
+font-size: 13px;
+transition: 0.25s;
+}
+
+.primary-btn:hover {
+transform: translateY(-2px);
+opacity: 0.88;
+}
+
+/* =========================
+GENERAL SECTIONS
+========================= */
+
+section {
+padding: 90px 0;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 48px;
+}
+
+.section-title span {
+display: block;
+font-size: 12px;
+color: #777069;
+margin-bottom: 10px;
+}
+
+.section-title h2 {
+font-family: Georgia, Tahoma, serif;
+font-weight: 400;
+font-size: clamp(38px, 5vw, 58px);
+}
+
+.section-title p {
+max-width: 620px;
+margin: 14px auto 0;
+color: #6f6963;
+}
+
+/* =========================
+PRODUCTS
+========================= */
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 26px;
+}
+
+.product-card {
+background: #fffdf9;
+border: 1px solid #ece6de;
+overflow: hidden;
+transition: 0.25s;
+}
+
+.product-card:hover {
+transform: translateY(-4px);
+}
+
+.product-image-wrap {
+background: #eee7de;
+overflow: hidden;
+}
+
+.product-card img {
+width: 100%;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+display: block;
+transition: 0.4s;
+}
+
+.product-card:hover img {
+transform: scale(1.02);
+}
+
+.product-info {
+padding: 25px;
+text-align: center;
+}
+
+.product-info h3 {
+font-family: Georgia, Tahoma, serif;
+font-size: 25px;
+font-weight: 400;
+margin-bottom: 8px;
+}
+
+.product-info p {
+color: #726b64;
+font-size: 14px;
+min-height: 44px;
+}
+
+.price {
+font-size: 17px;
+font-weight: 700;
+margin: 18px 0;
+}
+
+.buy-btn {
+display: inline-block;
+background: #1f1f1f;
+color: white;
+text-decoration: none;
+padding: 12px 25px;
+border-radius: 999px;
+font-size: 12px;
+transition: 0.25s;
+}
+
+.buy-btn:hover {
+transform: translateY(-2px);
+opacity: 0.88;
+}
+
+/* =========================
+FEATURES
+========================= */
+
+.features {
+background: #fffdf9;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+text-align: center;
+}
+
+.feature {
+padding: 12px;
+}
+
+.feature-icon {
+font-size: 28px;
+margin-bottom: 12px;
+}
+
+.feature h4 {
+margin-bottom: 6px;
+font-size: 16px;
+}
+
+.feature p {
+color: #746d66;
+font-size: 14px;
+}
+
+/* =========================
+ABOUT
+========================= */
+
+.about {
+background: #efe7dd;
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+align-items: center;
+}
+
+.about img {
+width: 100%;
+border-radius: 8px;
+display: block;
+}
+
+.about h2 {
+font-family: Georgia, Tahoma, serif;
+font-size: clamp(38px, 5vw, 58px);
+font-weight: 400;
+margin-bottom: 20px;
+}
+
+.about p {
+color: #625c56;
+margin-bottom: 15px;
+}
+
+/* =========================
+FAQ
+========================= */
+
+.faq-list {
+max-width: 820px;
+margin: auto;
+}
+
+details {
+background: #fffdf9;
+border-bottom: 1px solid #e7e0d8;
+padding: 20px 22px;
+}
+
+summary {
+cursor: pointer;
+font-weight: 600;
+}
+
+details p {
+color: #706a64;
+margin-top: 12px;
+}
+
+/* =========================
+CONTACT / WHATSAPP
+========================= */
+
+.contact {
+text-align: center;
+background: #1f1f1f;
+color: white;
+}
+
+.contact h2 {
+font-family: Georgia, Tahoma, serif;
+font-size: clamp(42px, 5vw, 60px);
+font-weight: 400;
+margin-bottom: 14px;
+}
+
+.contact p {
+color: #d8d3cc;
+max-width: 550px;
+margin: 0 auto 25px;
+}
+
+.whatsapp-btn {
+display: inline-block;
+background: white;
+color: #1f1f1f;
+text-decoration: none;
+padding: 15px 30px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 600;
+transition: 0.25s;
+}
+
+.whatsapp-btn:hover {
+transform: translateY(-2px);
+opacity: 0.9;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+background: #fffdf9;
+padding: 32px 0;
+text-align: center;
+color: #756f68;
+font-size: 13px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+.nav-inner {
+flex-direction: column;
+gap: 14px;
+}
+
+.nav-right {
+flex-direction: column;
+gap: 12px;
+}
+
+.product-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.features-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.about-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 650px) {
+
+.nav-links {
+gap: 13px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.nav-links a {
+font-size: 13px;
+}
+
+.language-switch {
+padding: 8px 15px;
+}
+
+.hero {
+min-height: 68vh;
+}
+
+.hero h1 {
+font-size: 43px;
+}
+
+.product-grid {
+grid-template-columns: 1fr;
+}
+
+.features-grid {
+grid-template-columns: 1fr;
+}
+
+section {
+padding: 70px 0;
+}
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+
+<div class="container nav-inner">
+
+<a href="#home" class="logo">
+BY HAMDA
+</a>
+
+<div class="nav-right">
+
+<nav class="nav-links">
+
+<a href="#home">الرئيسية</a>
+
+<a href="#shop">المتجر</a>
+
+<a href="#about">من نحن</a>
+
+<a href="#faq">الأسئلة الشائعة</a>
+
+<a href="#contact">تواصل معنا</a>
+
+</nav>
+
+<a href="index.html" class="language-switch">
+<span class="language-icon">◎</span>
+English
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+منتجات رقمية
+</div>
+
+<h1>
+منتجات رقمية لحياة أكثر تنظيمًا وبساطة.
+</h1>
+
+<p>
+منتجات رقمية جميلة وعملية صُممت لتساعدك على تنظيم يومك،
+تطوير أفكارك، والاستمتاع بتجربة أكثر سهولة وإبداعًا.
+</p>
+
+<a href="#shop" class="primary-btn">
+تصفحي المنتجات
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SHOP -->
+
+<section id="shop">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+تسوقي الآن
+</span>
+
+<h2>
+منتجاتنا الرقمية
+</h2>
+
+<p>
+أدوات وملفات رقمية عملية صُممت بعناية لتكون جميلة وسهلة الاستخدام.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<img
+src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
+alt="المخطط الرقمي"
+>
+
+</div>
+
+<div class="product-info">
+
+<h3>
+المخطط الرقمي
+</h3>
+
+<p>
+نظّمي أيامك وأهدافك وروتينك بطريقة جميلة وعملية.
+</p>
+
+<div class="price">
+39 درهم
+</div>
+
+<a href="#" class="buy-btn">
+شراء الآن
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- PRODUCT 2 -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<img
+src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80"
+alt="كتاب تلوين للأطفال"
+>
+
+</div>
+
+<div class="product-info">
+
+<h3>
+كتاب تلوين للأطفال
+</h3>
+
+<p>
+أنشطة ممتعة وهادفة قابلة للطباعة للأطفال.
+</p>
+
+<div class="price">
+29 درهم
+</div>
+
+<a href="#" class="buy-btn">
+شراء الآن
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- PRODUCT 3 -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<img
+src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+alt="دليل التصوير بالموبايل"
+>
+
+</div>
+
+<div class="product-info">
+
+<h3>
+دليل التصوير بالموبايل
+</h3>
+
+<p>
+تعلمي كيف تلتقطين صورًا جميلة واحترافية باستخدام هاتفك.
+</p>
+
+<div class="price">
+49 درهم
+</div>
+
+<a href="#" class="buy-btn">
+شراء الآن
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="container features-grid">
+
+<div class="feature">
+
+<div class="feature-icon">
+↓
+</div>
+
+<h4>
+تحميل فوري
+</h4>
+
+<p>
+احصلي على منتجك الرقمي بسهولة بعد إتمام عملية الشراء.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+♡
+</div>
+
+<h4>
+صُمم بعناية
+</h4>
+
+<p>
+منتجات رقمية مصممة بعناية واهتمام بالتفاصيل.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✓
+</div>
+
+<h4>
+دفع آمن
+</h4>
+
+<p>
+تجربة دفع بسيطة وآمنة عند شراء منتجاتك.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+⌘
+</div>
+
+<h4>
+استخدميه في أي مكان
+</h4>
+
+<p>
+افتحي ملفاتك من الهاتف أو الجهاز اللوحي أو الكمبيوتر.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
+alt="By Hamda"
+>
+
+</div>
+
+
+<div>
+
+<div class="eyebrow">
+عن BY HAMDA
+</div>
+
+<h2>
+أفكار جميلة بصيغة رقمية.
+</h2>
+
+<p>
+BY HAMDA هي مجموعة من المنتجات الرقمية المصممة لتجعل الحياة اليومية
+أكثر تنظيمًا وإبداعًا وسهولة.
+</p>
+
+<p>
+من المخططات والأدلة إلى الملفات القابلة للطباعة،
+كل منتج صُمم ليجمع بين البساطة والجمال وسهولة الاستخدام.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+لديك استفسار؟
+</span>
+
+<h2>
+الأسئلة الشائعة
+</h2>
+
+</div>
+
+
+<div class="faq-list">
+
+
+<details>
+
+<summary>
+هل المنتجات منتجات فعلية ويتم شحنها؟
+</summary>
+
+<p>
+لا، جميع المنتجات الموجودة في الموقع منتجات رقمية،
+ولن يتم شحن أي منتج فعلي.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+كيف سأستلم المنتج؟
+</summary>
+
+<p>
+سيتم توفير المنتج لك إلكترونيًا بعد إتمام عملية الشراء.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل يمكنني طباعة الملفات؟
+</summary>
+
+<p>
+نعم، المنتجات المخصصة للطباعة يمكن تحميلها وطباعتها
+للاستخدام الشخصي.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل يمكن استرجاع المبلغ؟
+</summary>
+
+<p>
+نظرًا لطبيعة المنتجات الرقمية، فإن المشتريات لا تكون قابلة
+للاسترجاع بشكل عام بعد استلام المنتج الرقمي أو الوصول إليه.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+أحتاج مساعدة في طلبي، كيف أتواصل معكم؟
+</summary>
+
+<p>
+يمكنك التواصل معنا مباشرة عبر واتساب من خلال زر التواصل
+الموجود أسفل الصفحة.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div
+class="eyebrow"
+style="color:#bbb3aa;"
+>
+تواصلي معنا
+</div>
+
+
+<h2>
+تحتاجين مساعدة؟
+</h2>
+
+
+<p>
+لديك استفسار عن أحد المنتجات؟
+يسعدنا مساعدتك.
+</p>
+
+
+<a
+href="https://wa.me/971544607998?text=مرحبا%20By%20Hamda%20لدي%20استفسار%20عن%20أحد%20المنتجات."
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp-btn"
+>
+تواصلي معنا عبر واتساب
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 BY HAMDA. جميع الحقوق محفوظة.
+</footer>
+
+
+</body>
+</html>
