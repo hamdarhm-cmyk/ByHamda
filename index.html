@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>BY HAMDA</title>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+name="description"
+content="BY HAMDA - Beautiful and practical digital products."
+>
+
+<title>BY HAMDA | Digital Products</title>
+
 
 <style>
+
+/* ========================================
+RESET
+======================================== */
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -32,645 +50,1333 @@ width: min(1120px, 92%);
 margin: auto;
 }
 
-/* NAVBAR */
+
+/* ========================================
+NAVIGATION
+======================================== */
+
 .navbar {
-background: #fffdf9;
+background: rgba(255, 253, 249, 0.97);
 border-bottom: 1px solid #ece6de;
+
 position: sticky;
 top: 0;
+
 z-index: 1000;
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 }
+
 
 .nav-inner {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 0;
+
+padding: 18px 0;
 }
 
+
 .logo {
-font-size: 26px;
+font-size: 24px;
 letter-spacing: 5px;
 font-weight: 700;
+
 text-decoration: none;
+
+white-space: nowrap;
 }
+
+
+.nav-right {
+display: flex;
+align-items: center;
+gap: 24px;
+}
+
 
 .nav-links {
 display: flex;
-gap: 26px;
+align-items: center;
+gap: 25px;
 }
+
 
 .nav-links a {
 text-decoration: none;
 font-size: 14px;
+
+transition: 0.2s ease;
 }
 
-/* HERO */
+
+.nav-links a:hover {
+opacity: 0.55;
+}
+
+
+/* LANGUAGE BUTTON */
+
+.language-switch {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+gap: 8px;
+
+text-decoration: none;
+
+border: 1px solid #cfc6bc;
+
+background: #f6f1eb;
+
+padding: 9px 16px;
+
+border-radius: 999px;
+
+font-size: 13px;
+font-weight: 600;
+
+white-space: nowrap;
+
+transition: all 0.25s ease;
+}
+
+
+.language-switch:hover {
+background: #1f1f1f;
+color: #ffffff;
+
+border-color: #1f1f1f;
+
+transform: translateY(-1px);
+}
+
+
+.language-icon {
+font-size: 15px;
+}
+
+
+/* ========================================
+HERO
+======================================== */
+
 .hero {
+
 background:
-linear-gradient(rgba(241, 233, 223, 0.7), rgba(241, 233, 223, 0.7)),
-url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1600&q=80');
+
+linear-gradient(
+rgba(241, 233, 223, 0.72),
+rgba(241, 233, 223, 0.72)
+),
+
+url(
+'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1600&q=80'
+);
+
 background-size: cover;
 background-position: center;
+
 min-height: 78vh;
+
 display: flex;
 align-items: center;
 }
 
+
 .hero-content {
 max-width: 650px;
+
 padding: 80px 0;
 }
 
+
 .eyebrow {
 text-transform: uppercase;
+
 letter-spacing: 3px;
+
 font-size: 12px;
+
 margin-bottom: 16px;
+
 color: #6e675f;
 }
 
+
 .hero h1 {
-font-family: Georgia, 'Times New Roman', serif;
+font-family: Georgia, "Times New Roman", serif;
+
 font-size: clamp(48px, 7vw, 82px);
+
 font-weight: 400;
+
 line-height: 1.05;
+
 margin-bottom: 22px;
 }
 
+
 .hero p {
 font-size: 18px;
+
 max-width: 540px;
+
 color: #5f5a55;
+
 margin-bottom: 30px;
 }
 
+
 .primary-btn {
 display: inline-block;
+
 background: #1f1f1f;
-color: #fff;
+color: #ffffff;
+
 text-decoration: none;
+
 padding: 15px 28px;
+
 border-radius: 999px;
+
 font-size: 13px;
-letter-spacing: 1.5px;
+
+letter-spacing: 1.4px;
+
 text-transform: uppercase;
+
+transition: all 0.25s ease;
 }
 
-/* SECTION */
+
+.primary-btn:hover {
+transform: translateY(-2px);
+
+opacity: 0.88;
+}
+
+
+/* ========================================
+GENERAL SECTIONS
+======================================== */
+
 section {
 padding: 90px 0;
 }
 
+
 .section-title {
 text-align: center;
+
 margin-bottom: 48px;
 }
 
+
 .section-title span {
 display: block;
+
 text-transform: uppercase;
+
 letter-spacing: 3px;
+
 font-size: 12px;
+
 color: #777069;
+
 margin-bottom: 10px;
 }
 
+
 .section-title h2 {
-font-family: Georgia, 'Times New Roman', serif;
+font-family: Georgia, "Times New Roman", serif;
+
 font-weight: 400;
+
 font-size: clamp(38px, 5vw, 58px);
 }
 
+
 .section-title p {
 max-width: 620px;
+
 margin: 14px auto 0;
+
 color: #6f6963;
 }
 
-/* PRODUCTS */
+
+/* ========================================
+PRODUCTS
+======================================== */
+
 .product-grid {
 display: grid;
+
 grid-template-columns: repeat(3, 1fr);
+
 gap: 26px;
 }
 
+
 .product-card {
 background: #fffdf9;
+
 border: 1px solid #ece6de;
+
+overflow: hidden;
+
+transition: all 0.25s ease;
+}
+
+
+.product-card:hover {
+transform: translateY(-4px);
+}
+
+
+.product-image-wrap {
+background: #eee7de;
+
 overflow: hidden;
 }
 
+
 .product-card img {
 width: 100%;
+
 aspect-ratio: 1 / 1;
+
 object-fit: cover;
+
 display: block;
+
+transition: transform 0.4s ease;
 }
 
+
+.product-card:hover img {
+transform: scale(1.02);
+}
+
+
 .product-info {
-padding: 24px;
+padding: 25px;
+
 text-align: center;
 }
 
+
 .product-info h3 {
-font-family: Georgia, 'Times New Roman', serif;
+font-family: Georgia, "Times New Roman", serif;
+
 font-size: 25px;
+
 font-weight: 400;
+
 margin-bottom: 8px;
 }
 
+
 .product-info p {
 color: #726b64;
+
 font-size: 14px;
+
 min-height: 44px;
 }
 
+
 .price {
 font-size: 17px;
+
 font-weight: 700;
+
 margin: 18px 0;
 }
 
+
 .buy-btn {
 display: inline-block;
+
 background: #1f1f1f;
-color: #fff;
+color: #ffffff;
+
 text-decoration: none;
-padding: 12px 24px;
+
+padding: 12px 25px;
+
 border-radius: 999px;
+
 font-size: 12px;
+
 letter-spacing: 1.3px;
+
 text-transform: uppercase;
+
+transition: all 0.25s ease;
 }
 
-/* FEATURES */
+
+.buy-btn:hover {
+transform: translateY(-2px);
+
+opacity: 0.88;
+}
+
+
+/* ========================================
+FEATURES
+======================================== */
+
 .features {
 background: #fffdf9;
 }
 
+
 .features-grid {
 display: grid;
+
 grid-template-columns: repeat(4, 1fr);
+
 gap: 30px;
+
 text-align: center;
 }
+
 
 .feature {
 padding: 12px;
 }
 
+
 .feature-icon {
-font-size: 30px;
+font-size: 28px;
+
 margin-bottom: 12px;
 }
 
+
 .feature h4 {
 margin-bottom: 6px;
+
 font-size: 16px;
 }
 
+
 .feature p {
 color: #746d66;
+
 font-size: 14px;
 }
 
-/* ABOUT */
+
+/* ========================================
+ABOUT
+======================================== */
+
 .about {
 background: #efe7dd;
 }
 
+
 .about-grid {
 display: grid;
+
 grid-template-columns: 1fr 1fr;
+
 gap: 50px;
+
 align-items: center;
 }
 
+
 .about img {
 width: 100%;
+
 border-radius: 8px;
+
 display: block;
 }
 
+
 .about h2 {
-font-family: Georgia, 'Times New Roman', serif;
+font-family: Georgia, "Times New Roman", serif;
+
 font-size: clamp(38px, 5vw, 58px);
+
 font-weight: 400;
+
 margin-bottom: 20px;
 }
 
+
 .about p {
 color: #625c56;
+
 margin-bottom: 15px;
 }
 
-/* FAQ */
+
+/* ========================================
+FAQ
+======================================== */
+
 .faq-list {
 max-width: 820px;
+
 margin: auto;
 }
 
+
 details {
 background: #fffdf9;
+
 border-bottom: 1px solid #e7e0d8;
+
 padding: 20px 22px;
 }
 
+
 summary {
 cursor: pointer;
+
 font-weight: 600;
 }
 
+
 details p {
 color: #706a64;
+
 margin-top: 12px;
 }
 
-/* CONTACT */
+
+/* ========================================
+CONTACT / WHATSAPP
+======================================== */
+
 .contact {
 text-align: center;
+
 background: #1f1f1f;
-color: #fff;
+
+color: #ffffff;
 }
 
+
 .contact h2 {
-font-family: Georgia, 'Times New Roman', serif;
-font-size: clamp(38px, 5vw, 58px);
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: clamp(42px, 5vw, 60px);
+
 font-weight: 400;
+
 margin-bottom: 14px;
 }
 
+
 .contact p {
 color: #d8d3cc;
-margin-bottom: 25px;
+
+max-width: 550px;
+
+margin: 0 auto 25px;
 }
 
-.contact a {
-color: #fff;
+
+.whatsapp-btn {
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 9px;
+
+background: #ffffff;
+
+color: #1f1f1f;
+
+text-decoration: none;
+
+padding: 15px 30px;
+
+border-radius: 999px;
+
+font-size: 13px;
+
+font-weight: 600;
+
+transition: all 0.25s ease;
 }
 
-/* FOOTER */
+
+.whatsapp-btn:hover {
+transform: translateY(-2px);
+
+opacity: 0.9;
+}
+
+
+/* ========================================
+FOOTER
+======================================== */
+
 footer {
 background: #fffdf9;
+
 padding: 32px 0;
+
 text-align: center;
+
 color: #756f68;
+
 font-size: 13px;
 }
 
-/* MOBILE */
+
+/* ========================================
+TABLET
+======================================== */
+
 @media (max-width: 900px) {
+
+.nav-inner {
+flex-direction: column;
+
+gap: 14px;
+}
+
+
+.nav-right {
+flex-direction: column;
+
+gap: 12px;
+}
+
+
 .product-grid {
 grid-template-columns: 1fr 1fr;
 }
+
 
 .features-grid {
 grid-template-columns: 1fr 1fr;
 }
 
+
 .about-grid {
 grid-template-columns: 1fr;
 }
+
 }
+
+
+/* ========================================
+MOBILE
+======================================== */
 
 @media (max-width: 650px) {
-.nav-inner {
-flex-direction: column;
-gap: 12px;
+
+.navbar {
+position: relative;
 }
 
+
+.nav-inner {
+padding: 15px 0;
+}
+
+
 .nav-links {
-gap: 14px;
+gap: 13px;
+
 flex-wrap: wrap;
+
 justify-content: center;
 }
+
+
+.nav-links a {
+font-size: 13px;
+}
+
+
+.language-switch {
+padding: 8px 16px;
+}
+
 
 .hero {
 min-height: 68vh;
 }
 
+
+.hero-content {
+padding: 65px 0;
+}
+
+
+.hero h1 {
+font-size: 46px;
+}
+
+
+.hero p {
+font-size: 16px;
+}
+
+
 .product-grid {
 grid-template-columns: 1fr;
 }
+
 
 .features-grid {
 grid-template-columns: 1fr;
 }
 
+
 section {
 padding: 70px 0;
 }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- ========================================
+NAVIGATION
+======================================== -->
+
 <header class="navbar">
+
 <div class="container nav-inner">
-<a href="#" class="logo">BY HAMDA</a>
+
+
+<!-- LOGO -->
+
+<a href="#home" class="logo">
+BY HAMDA
+</a>
+
+
+<div class="nav-right">
+
+
+<!-- MENU -->
 
 <nav class="nav-links">
-<a href="#home">Home</a>
-<a href="#shop">Shop</a>
-<a href="#about">About</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#shop">
+Shop
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#faq">
+FAQ
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
 </nav>
+
+
+<!-- ARABIC LANGUAGE -->
+
+<a
+href="ar.html"
+class="language-switch"
+aria-label="Switch to Arabic"
+>
+
+<span class="language-icon">
+◎
+</span>
+
+العربية
+
+</a>
+
+
 </div>
+
+</div>
+
 </header>
+
+
 
 <main>
 
-<section class="hero" id="home">
-<div class="container">
-<div class="hero-content">
-<div class="eyebrow">Digital Goods</div>
 
-<h1>Digital products for a more intentional life.</h1>
+<!-- ========================================
+HERO
+======================================== -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+
+<div class="eyebrow">
+DIGITAL GOODS
+</div>
+
+
+<h1>
+Digital products for a more intentional life.
+</h1>
+
 
 <p>
 Beautiful and practical digital products created to inspire,
 organize and simplify your everyday life.
 </p>
 
-<a href="#shop" class="primary-btn">Explore The Collection</a>
+
+<a
+href="#shop"
+class="primary-btn"
+>
+Explore The Collection
+</a>
+
+
 </div>
+
 </div>
+
 </section>
 
+
+
+<!-- ========================================
+SHOP
+======================================== -->
+
 <section id="shop">
+
 <div class="container">
 
+
 <div class="section-title">
-<span>Shop Our</span>
-<h2>Digital Products</h2>
+
+<span>
+SHOP OUR
+</span>
+
+<h2>
+Digital Products
+</h2>
+
 <p>
 Practical tools and creative resources designed with care.
 </p>
+
 </div>
+
+
 
 <div class="product-grid">
 
+
+<!-- =================================
+PRODUCT 1
+DIGITAL PLANNER
+================================= -->
+
 <article class="product-card">
+
+
+<div class="product-image-wrap">
+
 <img
 src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
 alt="Digital Planner"
-/>
+>
+
+</div>
+
 
 <div class="product-info">
-<h3>Digital Planner</h3>
+
+
+<h3>
+Digital Planner
+</h3>
+
+
 <p>
 Organize your days, goals and routines beautifully.
 </p>
 
-<div class="price">AED 39</div>
 
-<a href="#" class="buy-btn">Buy Now</a>
+<div class="price">
+AED 39
 </div>
+
+
+<a
+href="#"
+class="buy-btn"
+>
+Buy Now
+</a>
+
+
+</div>
+
 </article>
 
+
+
+<!-- =================================
+PRODUCT 2
+KIDS COLORING BOOK
+================================= -->
+
 <article class="product-card">
+
+
+<div class="product-image-wrap">
+
 <img
 src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80"
 alt="Kids Coloring Book"
-/>
+>
+
+</div>
+
 
 <div class="product-info">
-<h3>Kids Coloring Book</h3>
+
+
+<h3>
+Kids Coloring Book
+</h3>
+
+
 <p>
 Fun and meaningful printable activities for little ones.
 </p>
 
-<div class="price">AED 29</div>
 
-<a href="#" class="buy-btn">Buy Now</a>
+<div class="price">
+AED 29
 </div>
+
+
+<a
+href="#"
+class="buy-btn"
+>
+Buy Now
+</a>
+
+
+</div>
+
 </article>
 
+
+
+<!-- =================================
+PRODUCT 3
+MOBILE PHOTOGRAPHY GUIDE
+================================= -->
+
 <article class="product-card">
+
+
+<div class="product-image-wrap">
+
 <img
 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
 alt="Mobile Photography Guide"
-/>
+>
+
+</div>
+
 
 <div class="product-info">
-<h3>Mobile Photography Guide</h3>
+
+
+<h3>
+Mobile Photography Guide
+</h3>
+
+
 <p>
 Learn how to create beautiful photos using your phone.
 </p>
 
-<div class="price">AED 49</div>
 
-<a href="#" class="buy-btn">Buy Now</a>
+<div class="price">
+AED 49
 </div>
+
+
+<a
+href="#"
+class="buy-btn"
+>
+Buy Now
+</a>
+
+
+</div>
+
 </article>
 
+
 </div>
+
 </div>
+
 </section>
+
+
+
+<!-- ========================================
+FEATURES
+======================================== -->
 
 <section class="features">
+
 <div class="container features-grid">
 
-<div class="feature">
-<div class="feature-icon">↓</div>
-<h4>Instant Download</h4>
-<p>Access your digital product quickly after purchase.</p>
-</div>
 
 <div class="feature">
-<div class="feature-icon">♡</div>
-<h4>Made With Care</h4>
-<p>Thoughtfully designed digital resources.</p>
+
+<div class="feature-icon">
+↓
 </div>
+
+<h4>
+Instant Download
+</h4>
+
+<p>
+Access your digital product quickly after purchase.
+</p>
+
+</div>
+
+
 
 <div class="feature">
-<div class="feature-icon">✓</div>
-<h4>Secure Payment</h4>
-<p>Checkout will be connected to a secure payment provider.</p>
+
+<div class="feature-icon">
+♡
 </div>
+
+<h4>
+Made With Care
+</h4>
+
+<p>
+Thoughtfully designed digital resources.
+</p>
+
+</div>
+
+
 
 <div class="feature">
-<div class="feature-icon">⌘</div>
-<h4>Access Anywhere</h4>
-<p>Use your files from your phone, tablet or computer.</p>
+
+<div class="feature-icon">
+✓
 </div>
 
+<h4>
+Secure Payment
+</h4>
+
+<p>
+Safe and simple checkout for your purchase.
+</p>
+
 </div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+⌘
+</div>
+
+<h4>
+Access Anywhere
+</h4>
+
+<p>
+Use your files from your phone, tablet or computer.
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
-<section class="about" id="about">
+
+
+<!-- ========================================
+ABOUT
+======================================== -->
+
+<section
+class="about"
+id="about"
+>
+
 <div class="container about-grid">
 
+
 <div>
+
 <img
 src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
-alt="By Hamda"
-/>
+alt="BY HAMDA Digital Products"
+>
+
 </div>
+
+
 
 <div>
-<div class="eyebrow">About By Hamda</div>
 
-<h2>Beautiful ideas made digital.</h2>
 
-<p>
-By Hamda is a collection of digital products created to make
-everyday life more organized, creative and enjoyable.
-</p>
-
-<p>
-From planners and guides to printable resources, every product
-is designed with simplicity and beauty in mind.
-</p>
+<div class="eyebrow">
+ABOUT BY HAMDA
 </div>
 
+
+<h2>
+Beautiful ideas made digital.
+</h2>
+
+
+<p>
+BY HAMDA is a collection of digital products created
+to make everyday life more organized, creative and enjoyable.
+</p>
+
+
+<p>
+From planners and guides to printable resources,
+every product is designed with simplicity and beauty in mind.
+</p>
+
+
 </div>
+
+
+</div>
+
 </section>
 
+
+
+<!-- ========================================
+FAQ
+======================================== -->
+
 <section id="faq">
+
 <div class="container">
 
+
 <div class="section-title">
-<span>Questions</span>
-<h2>FAQ</h2>
+
+<span>
+QUESTIONS
+</span>
+
+<h2>
+FAQ
+</h2>
+
 </div>
+
+
 
 <div class="faq-list">
 
+
 <details>
-<summary>Are these physical products?</summary>
+
+<summary>
+Are these physical products?
+</summary>
+
 <p>
-No. The products sold on this website are digital products.
+No. All products sold on this website are digital products.
 Nothing physical will be shipped.
 </p>
+
 </details>
 
-<details>
-<summary>How will I receive my product?</summary>
-<p>
-After payment, you will receive access to your digital file.
-The exact delivery method will be added when the payment system
-is connected.
-</p>
-</details>
+
 
 <details>
-<summary>Can I print the files?</summary>
+
+<summary>
+How will I receive my product?
+</summary>
+
 <p>
-Yes, printable products can be downloaded and printed for
-personal use.
+Your digital product will be available electronically
+after completing your purchase.
 </p>
+
 </details>
 
+
+
 <details>
-<summary>Can I get a refund?</summary>
+
+<summary>
+Can I print the files?
+</summary>
+
 <p>
-Because digital products are delivered electronically,
-refund terms will depend on the final store policy.
+Yes. Printable products can be downloaded and printed
+for personal use.
 </p>
+
 </details>
+
+
+
+<details>
+
+<summary>
+Can I get a refund?
+</summary>
+
+<p>
+Due to the nature of digital products, purchases are generally
+non-refundable once the digital product has been delivered
+or accessed.
+</p>
+
+</details>
+
+
+
+<details>
+
+<summary>
+I need help with my order. How can I contact you?
+</summary>
+
+<p>
+You can contact us directly through WhatsApp using
+the contact button below.
+</p>
+
+</details>
+
 
 </div>
 
 </div>
+
 </section>
 
-<section class="contact" id="contact">
+
+
+<!-- ========================================
+CONTACT / WHATSAPP
+======================================== -->
+
+<section
+class="contact"
+id="contact"
+>
+
 <div class="container">
 
-<div class="eyebrow" style="color:#bbb3aa;">Get In Touch</div>
 
-<h2>Have a question?</h2>
+<div
+class="eyebrow"
+style="color:#bbb3aa;"
+>
+GET IN TOUCH
+</div>
+
+
+<h2>
+Need help?
+</h2>
+
 
 <p>
-Send us a message and we'll get back to you as soon as possible.
+Have a question about one of our products?
+We're happy to help.
 </p>
 
-<form
-action="https://formsubmit.co/hamdarhm@gmail.com"
-method="POST"
-style="max-width:650px; margin:35px auto 0;"
+
+<a
+href="https://wa.me/971544607998?text=Hello%20BY%20HAMDA%2C%20I%20have%20a%20question%20about%20one%20of%20your%20products."
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp-btn"
 >
 
-<input
-type="text"
-name="name"
-placeholder="Your Name"
-required
-style="
-width:100%;
-padding:16px;
-margin-bottom:14px;
-border:none;
-border-radius:8px;
-font-size:15px;
-"
->
+<span>
+◇
+</span>
 
-<input
-type="email"
-name="email"
-placeholder="Your Email"
-required
-style="
-width:100%;
-padding:16px;
-margin-bottom:14px;
-border:none;
-border-radius:8px;
-font-size:15px;
-"
->
+Chat with us on WhatsApp
 
-<textarea
-name="message"
-placeholder="Your Message"
-rows="6"
-required
-style="
-width:100%;
-padding:16px;
-margin-bottom:14px;
-border:none;
-border-radius:8px;
-font-size:15px;
-resize:vertical;
-"
-></textarea>
+</a>
 
-<input type="hidden" name="_subject" value="New message from By Hamda website">
-
-<input type="hidden" name="_captcha" value="false">
-
-<button
-type="submit"
-style="
-background:#fff;
-color:#1f1f1f;
-border:none;
-padding:14px 30px;
-border-radius:999px;
-font-size:13px;
-letter-spacing:1.2px;
-cursor:pointer;
-"
->
-Send Message
-</button>
-
-</form>
 
 </div>
+
 </section>
+
 
 </main>
 
+
+
+<!-- ========================================
+FOOTER
+======================================== -->
+
 <footer>
+
 © 2026 BY HAMDA. All rights reserved.
+
 </footer>
 
+
 </body>
+
 </html>
