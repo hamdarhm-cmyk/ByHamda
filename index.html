@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BY HAMDA</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f8f5f0;
+color: #1f1f1f;
+line-height: 1.6;
+}
+
+a {
+color: inherit;
+}
+
+.container {
+width: min(1120px, 92%);
+margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+background: #fffdf9;
+border-bottom: 1px solid #ece6de;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.nav-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+}
+
+.logo {
+font-size: 26px;
+letter-spacing: 5px;
+font-weight: 700;
+text-decoration: none;
+}
+
+.nav-links {
+display: flex;
+gap: 26px;
+}
+
+.nav-links a {
+text-decoration: none;
+font-size: 14px;
+}
+
+/* HERO */
+.hero {
+background:
+linear-gradient(rgba(241, 233, 223, 0.7), rgba(241, 233, 223, 0.7)),
+url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1600&q=80');
+background-size: cover;
+background-position: center;
+min-height: 78vh;
+display: flex;
+align-items: center;
+}
+
+.hero-content {
+max-width: 650px;
+padding: 80px 0;
+}
+
+.eyebrow {
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 12px;
+margin-bottom: 16px;
+color: #6e675f;
+}
+
+.hero h1 {
+font-family: Georgia, 'Times New Roman', serif;
+font-size: clamp(48px, 7vw, 82px);
+font-weight: 400;
+line-height: 1.05;
+margin-bottom: 22px;
+}
+
+.hero p {
+font-size: 18px;
+max-width: 540px;
+color: #5f5a55;
+margin-bottom: 30px;
+}
+
+.primary-btn {
+display: inline-block;
+background: #1f1f1f;
+color: #fff;
+text-decoration: none;
+padding: 15px 28px;
+border-radius: 999px;
+font-size: 13px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+/* SECTION */
+section {
+padding: 90px 0;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 48px;
+}
+
+.section-title span {
+display: block;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 12px;
+color: #777069;
+margin-bottom: 10px;
+}
+
+.section-title h2 {
+font-family: Georgia, 'Times New Roman', serif;
+font-weight: 400;
+font-size: clamp(38px, 5vw, 58px);
+}
+
+.section-title p {
+max-width: 620px;
+margin: 14px auto 0;
+color: #6f6963;
+}
+
+/* PRODUCTS */
+.product-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 26px;
+}
+
+.product-card {
+background: #fffdf9;
+border: 1px solid #ece6de;
+overflow: hidden;
+}
+
+.product-card img {
+width: 100%;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+display: block;
+}
+
+.product-info {
+padding: 24px;
+text-align: center;
+}
+
+.product-info h3 {
+font-family: Georgia, 'Times New Roman', serif;
+font-size: 25px;
+font-weight: 400;
+margin-bottom: 8px;
+}
+
+.product-info p {
+color: #726b64;
+font-size: 14px;
+min-height: 44px;
+}
+
+.price {
+font-size: 17px;
+font-weight: 700;
+margin: 18px 0;
+}
+
+.buy-btn {
+display: inline-block;
+background: #1f1f1f;
+color: #fff;
+text-decoration: none;
+padding: 12px 24px;
+border-radius: 999px;
+font-size: 12px;
+letter-spacing: 1.3px;
+text-transform: uppercase;
+}
+
+/* FEATURES */
+.features {
+background: #fffdf9;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+text-align: center;
+}
+
+.feature {
+padding: 12px;
+}
+
+.feature-icon {
+font-size: 30px;
+margin-bottom: 12px;
+}
+
+.feature h4 {
+margin-bottom: 6px;
+font-size: 16px;
+}
+
+.feature p {
+color: #746d66;
+font-size: 14px;
+}
+
+/* ABOUT */
+.about {
+background: #efe7dd;
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+align-items: center;
+}
+
+.about img {
+width: 100%;
+border-radius: 8px;
+display: block;
+}
+
+.about h2 {
+font-family: Georgia, 'Times New Roman', serif;
+font-size: clamp(38px, 5vw, 58px);
+font-weight: 400;
+margin-bottom: 20px;
+}
+
+.about p {
+color: #625c56;
+margin-bottom: 15px;
+}
+
+/* FAQ */
+.faq-list {
+max-width: 820px;
+margin: auto;
+}
+
+details {
+background: #fffdf9;
+border-bottom: 1px solid #e7e0d8;
+padding: 20px 22px;
+}
+
+summary {
+cursor: pointer;
+font-weight: 600;
+}
+
+details p {
+color: #706a64;
+margin-top: 12px;
+}
+
+/* CONTACT */
+.contact {
+text-align: center;
+background: #1f1f1f;
+color: #fff;
+}
+
+.contact h2 {
+font-family: Georgia, 'Times New Roman', serif;
+font-size: clamp(38px, 5vw, 58px);
+font-weight: 400;
+margin-bottom: 14px;
+}
+
+.contact p {
+color: #d8d3cc;
+margin-bottom: 25px;
+}
+
+.contact a {
+color: #fff;
+}
+
+/* FOOTER */
+footer {
+background: #fffdf9;
+padding: 32px 0;
+text-align: center;
+color: #756f68;
+font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+.product-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.features-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.about-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 650px) {
+.nav-inner {
+flex-direction: column;
+gap: 12px;
+}
+
+.nav-links {
+gap: 14px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.hero {
+min-height: 68vh;
+}
+
+.product-grid {
+grid-template-columns: 1fr;
+}
+
+.features-grid {
+grid-template-columns: 1fr;
+}
+
+section {
+padding: 70px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="container nav-inner">
+<a href="#" class="logo">BY HAMDA</a>
+
+<nav class="nav-links">
+<a href="#home">Home</a>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">Digital Goods</div>
+
+<h1>Digital products for a more intentional life.</h1>
+
+<p>
+Beautiful and practical digital products created to inspire,
+organize and simplify your everyday life.
+</p>
+
+<a href="#shop" class="primary-btn">Explore The Collection</a>
+</div>
+</div>
+</section>
+
+<section id="shop">
+<div class="container">
+
+<div class="section-title">
+<span>Shop Our</span>
+<h2>Digital Products</h2>
+<p>
+Practical tools and creative resources designed with care.
+</p>
+</div>
+
+<div class="product-grid">
+
+<article class="product-card">
+<img
+src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
+alt="Digital Planner"
+/>
+
+<div class="product-info">
+<h3>Digital Planner</h3>
+<p>
+Organize your days, goals and routines beautifully.
+</p>
+
+<div class="price">AED 39</div>
+
+<a href="#" class="buy-btn">Buy Now</a>
+</div>
+</article>
+
+<article class="product-card">
+<img
+src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80"
+alt="Kids Coloring Book"
+/>
+
+<div class="product-info">
+<h3>Kids Coloring Book</h3>
+<p>
+Fun and meaningful printable activities for little ones.
+</p>
+
+<div class="price">AED 29</div>
+
+<a href="#" class="buy-btn">Buy Now</a>
+</div>
+</article>
+
+<article class="product-card">
+<img
+src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+alt="Mobile Photography Guide"
+/>
+
+<div class="product-info">
+<h3>Mobile Photography Guide</h3>
+<p>
+Learn how to create beautiful photos using your phone.
+</p>
+
+<div class="price">AED 49</div>
+
+<a href="#" class="buy-btn">Buy Now</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="features">
+<div class="container features-grid">
+
+<div class="feature">
+<div class="feature-icon">↓</div>
+<h4>Instant Download</h4>
+<p>Access your digital product quickly after purchase.</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">♡</div>
+<h4>Made With Care</h4>
+<p>Thoughtfully designed digital resources.</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">✓</div>
+<h4>Secure Payment</h4>
+<p>Checkout will be connected to a secure payment provider.</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">⌘</div>
+<h4>Access Anywhere</h4>
+<p>Use your files from your phone, tablet or computer.</p>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-grid">
+
+<div>
+<img
+src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
+alt="By Hamda"
+/>
+</div>
+
+<div>
+<div class="eyebrow">About By Hamda</div>
+
+<h2>Beautiful ideas made digital.</h2>
+
+<p>
+By Hamda is a collection of digital products created to make
+everyday life more organized, creative and enjoyable.
+</p>
+
+<p>
+From planners and guides to printable resources, every product
+is designed with simplicity and beauty in mind.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+
+<div class="section-title">
+<span>Questions</span>
+<h2>FAQ</h2>
+</div>
+
+<div class="faq-list">
+
+<details>
+<summary>Are these physical products?</summary>
+<p>
+No. The products sold on this website are digital products.
+Nothing physical will be shipped.
+</p>
+</details>
+
+<details>
+<summary>How will I receive my product?</summary>
+<p>
+After payment, you will receive access to your digital file.
+The exact delivery method will be added when the payment system
+is connected.
+</p>
+</details>
+
+<details>
+<summary>Can I print the files?</summary>
+<p>
+Yes, printable products can be downloaded and printed for
+personal use.
+</p>
+</details>
+
+<details>
+<summary>Can I get a refund?</summary>
+<p>
+Because digital products are delivered electronically,
+refund terms will depend on the final store policy.
+</p>
+</details>
+
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="eyebrow" style="color:#bbb3aa;">Get In Touch</div>
+
+<h2>Have a question?</h2>
+
+<p>
+Contact us for product questions, support or collaborations.
+</p>
+
+<p>
+Email:
+<a href="mailto:hello@byhamda.com">
+hello@byhamda.com
+</a>
+</p>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+© 2026 BY HAMDA. All rights reserved.
+</footer>
+
+</body>
+</html>
