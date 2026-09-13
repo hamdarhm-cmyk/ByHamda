@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+name="description"
+content="The Ultimate Mobile Photography Guide by BY HAMDA. Learn how to shoot, edit and create beautiful photos using your phone."
+>
+
+<title>The Ultimate Mobile Photography Guide | BY HAMDA</title>
+
+
+<style>
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f8f5f0;
+color: #1f1f1f;
+line-height: 1.7;
+}
+
+a {
+color: inherit;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+.container {
+width: min(1120px, 92%);
+margin: auto;
+}
+
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar {
+background: rgba(255, 253, 249, 0.97);
+border-bottom: 1px solid #ece6de;
+
+position: sticky;
+top: 0;
+
+z-index: 1000;
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 18px 0;
+}
+
+.logo {
+text-decoration: none;
+
+font-size: 24px;
+font-weight: 700;
+letter-spacing: 5px;
+
+white-space: nowrap;
+}
+
+.nav-right {
+display: flex;
+align-items: center;
+gap: 24px;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 24px;
+}
+
+.nav-links a {
+text-decoration: none;
+font-size: 14px;
+transition: 0.2s;
+}
+
+.nav-links a:hover {
+opacity: 0.55;
+}
+
+.language-switch {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+
+text-decoration: none;
+
+border: 1px solid #cfc6bc;
+background: #f6f1eb;
+
+padding: 9px 16px;
+
+border-radius: 999px;
+
+font-size: 13px;
+font-weight: 600;
+
+transition: 0.25s;
+}
+
+.language-switch:hover {
+background: #1f1f1f;
+color: white;
+
+border-color: #1f1f1f;
+
+transform: translateY(-1px);
+}
+
+
+/* =========================
+PRODUCT HERO
+========================= */
+
+.product-section {
+padding: 75px 0 95px;
+}
+
+.product-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 65px;
+align-items: center;
+}
+
+.product-image {
+background: #eee6dc;
+padding: 24px;
+border-radius: 8px;
+}
+
+.product-image img {
+width: 100%;
+aspect-ratio: 1 / 1.15;
+
+object-fit: cover;
+
+border-radius: 4px;
+}
+
+.product-eyebrow {
+font-size: 12px;
+
+letter-spacing: 3px;
+
+color: #756e67;
+
+margin-bottom: 14px;
+}
+
+.product-title {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: clamp(43px, 5vw, 66px);
+
+line-height: 1.08;
+
+font-weight: 400;
+
+margin-bottom: 20px;
+}
+
+.short-description {
+font-size: 17px;
+color: #655f59;
+
+margin-bottom: 24px;
+}
+
+.price {
+font-size: 26px;
+font-weight: 700;
+
+margin-bottom: 25px;
+}
+
+.buy-btn {
+display: inline-block;
+
+background: #1f1f1f;
+color: white;
+
+text-decoration: none;
+
+padding: 16px 36px;
+
+border-radius: 999px;
+
+font-size: 13px;
+font-weight: 600;
+
+letter-spacing: 1.2px;
+
+transition: 0.25s;
+}
+
+.buy-btn:hover {
+transform: translateY(-2px);
+opacity: 0.88;
+}
+
+.small-note {
+margin-top: 16px;
+
+color: #78716a;
+
+font-size: 13px;
+}
+
+
+/* =========================
+PRODUCT INFO
+========================= */
+
+.info-section {
+background: #efe7dd;
+
+padding: 90px 0;
+}
+
+.info-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+gap: 60px;
+}
+
+.info-section h2 {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: clamp(36px, 5vw, 54px);
+
+font-weight: 400;
+
+line-height: 1.15;
+
+margin-bottom: 20px;
+}
+
+.info-section p {
+color: #625c56;
+
+margin-bottom: 15px;
+}
+
+.content-list {
+list-style: none;
+
+margin-top: 20px;
+}
+
+.content-list li {
+padding: 11px 0;
+
+border-bottom: 1px solid #d8cec3;
+
+color: #514c47;
+}
+
+.content-list li::before {
+content: "✓";
+
+margin-right: 12px;
+
+font-weight: bold;
+}
+
+
+/* =========================
+WHAT YOU'LL LEARN
+========================= */
+
+.learn-section {
+padding: 90px 0;
+}
+
+.section-title {
+text-align: center;
+
+max-width: 650px;
+
+margin: 0 auto 50px;
+}
+
+.section-title span {
+display: block;
+
+letter-spacing: 3px;
+
+font-size: 12px;
+
+color: #756f68;
+
+margin-bottom: 10px;
+}
+
+.section-title h2 {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: clamp(38px, 5vw, 56px);
+
+font-weight: 400;
+
+margin-bottom: 15px;
+}
+
+.section-title p {
+color: #6d665f;
+}
+
+.learn-grid {
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+}
+
+.learn-card {
+background: #fffdf9;
+
+border: 1px solid #ece5dd;
+
+padding: 30px;
+
+min-height: 190px;
+}
+
+.learn-number {
+font-size: 12px;
+
+color: #8b8279;
+
+margin-bottom: 18px;
+}
+
+.learn-card h3 {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: 23px;
+
+font-weight: 400;
+
+margin-bottom: 10px;
+}
+
+.learn-card p {
+color: #706961;
+
+font-size: 14px;
+}
+
+
+/* =========================
+WHO IS IT FOR
+========================= */
+
+.audience-section {
+background: #fffdf9;
+
+padding: 90px 0;
+}
+
+.audience-grid {
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 22px;
+
+text-align: center;
+}
+
+.audience-card {
+padding: 30px 20px;
+}
+
+.audience-icon {
+font-size: 30px;
+margin-bottom: 14px;
+}
+
+.audience-card h4 {
+margin-bottom: 7px;
+}
+
+.audience-card p {
+color: #706961;
+font-size: 14px;
+}
+
+
+/* =========================
+DIGITAL DOWNLOAD
+========================= */
+
+.download-section {
+background: #1f1f1f;
+
+color: white;
+
+padding: 80px 0;
+
+text-align: center;
+}
+
+.download-section h2 {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: clamp(40px, 5vw, 58px);
+
+font-weight: 400;
+
+margin-bottom: 15px;
+}
+
+.download-section p {
+color: #d1cbc4;
+
+max-width: 650px;
+
+margin: 0 auto 28px;
+}
+
+.download-btn {
+display: inline-block;
+
+background: white;
+color: #1f1f1f;
+
+text-decoration: none;
+
+padding: 15px 34px;
+
+border-radius: 999px;
+
+font-size: 13px;
+font-weight: 600;
+
+transition: 0.25s;
+}
+
+.download-btn:hover {
+transform: translateY(-2px);
+opacity: 0.9;
+}
+
+
+/* =========================
+FAQ
+========================= */
+
+.faq-section {
+padding: 90px 0;
+}
+
+.faq-list {
+max-width: 820px;
+
+margin: auto;
+}
+
+details {
+background: #fffdf9;
+
+border-bottom: 1px solid #e5ded6;
+
+padding: 20px 22px;
+}
+
+summary {
+cursor: pointer;
+font-weight: 600;
+}
+
+details p {
+margin-top: 12px;
+
+color: #706a64;
+}
+
+
+/* =========================
+WHATSAPP
+========================= */
+
+.help-section {
+background: #efe7dd;
+
+padding: 75px 0;
+
+text-align: center;
+}
+
+.help-section h2 {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: 44px;
+
+font-weight: 400;
+
+margin-bottom: 12px;
+}
+
+.help-section p {
+color: #655f59;
+
+margin-bottom: 25px;
+}
+
+.whatsapp-btn {
+display: inline-block;
+
+background: #1f1f1f;
+color: white;
+
+text-decoration: none;
+
+padding: 14px 28px;
+
+border-radius: 999px;
+
+font-size: 13px;
+
+transition: 0.25s;
+}
+
+.whatsapp-btn:hover {
+transform: translateY(-2px);
+opacity: 0.88;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+background: #fffdf9;
+
+padding: 32px 0;
+
+text-align: center;
+
+color: #756f68;
+
+font-size: 13px;
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+.nav-inner {
+flex-direction: column;
+gap: 14px;
+}
+
+.nav-right {
+flex-direction: column;
+gap: 12px;
+}
+
+.product-grid {
+grid-template-columns: 1fr;
+}
+
+.info-grid {
+grid-template-columns: 1fr;
+}
+
+.learn-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.audience-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+}
+
+
+@media (max-width: 650px) {
+
+.nav-links {
+gap: 13px;
+
+flex-wrap: wrap;
+
+justify-content: center;
+}
+
+.nav-links a {
+font-size: 13px;
+}
+
+.product-section {
+padding: 45px 0 70px;
+}
+
+.product-title {
+font-size: 43px;
+}
+
+.learn-grid {
+grid-template-columns: 1fr;
+}
+
+.audience-grid {
+grid-template-columns: 1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+
+<div class="container nav-inner">
+
+<a href="index.html" class="logo">
+BY HAMDA
+</a>
+
+<div class="nav-right">
+
+<nav class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="index.html#shop">
+Shop
+</a>
+
+<a href="index.html#about">
+About
+</a>
+
+<a href="index.html#faq">
+FAQ
+</a>
+
+<a href="index.html#contact">
+Contact
+</a>
+
+</nav>
+
+
+<a
+href="mobile-photography-ar.html"
+class="language-switch"
+>
+◎ العربية
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- PRODUCT -->
+
+<section class="product-section">
+
+<div class="container product-grid">
+
+
+<!-- PRODUCT IMAGE -->
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=90"
+alt="The Ultimate Mobile Photography Guide"
+>
+
+</div>
+
+
+
+<!-- PRODUCT DETAILS -->
+
+<div>
+
+<div class="product-eyebrow">
+DIGITAL EBOOK
+</div>
+
+
+<h1 class="product-title">
+The Ultimate Mobile Photography Guide
+</h1>
+
+
+<p class="short-description">
+Learn how to take beautiful, professional-looking photos using
+the camera you already carry every day — your phone.
+</p>
+
+
+<div class="price">
+AED 49
+</div>
+
+
+<a
+href="#"
+class="buy-btn"
+>
+BUY NOW
+</a>
+
+
+<div class="small-note">
+Digital product • Instant electronic delivery • No physical product will be shipped.
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT THE GUIDE -->
+
+<section class="info-section">
+
+<div class="container info-grid">
+
+
+<div>
+
+<div class="product-eyebrow">
+ABOUT THE GUIDE
+</div>
+
+<h2>
+Turn your phone into your creative tool.
+</h2>
+
+<p>
+Great photography isn't only about owning an expensive camera.
+It's about understanding light, composition, angles and how to
+tell a story through an image.
+</p>
+
+<p>
+This guide was created to help you improve your mobile photography
+step by step, whether you're taking photos for yourself, social media
+or your business.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h2>
+Inside the guide
+</h2>
+
+<ul class="content-list">
+
+<li>Understanding your phone camera</li>
+
+<li>Best camera settings</li>
+
+<li>Natural and artificial lighting</li>
+
+<li>Composition techniques</li>
+
+<li>Angles and perspectives</li>
+
+<li>People and lifestyle photography</li>
+
+<li>Product photography</li>
+
+<li>Food photography</li>
+
+<li>Mobile editing workflow</li>
+
+<li>AI tools for photography</li>
+
+<li>Common photography mistakes</li>
+
+<li>Practical tips and checklists</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- WHAT YOU WILL LEARN -->
+
+<section class="learn-section">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<span>
+LEARN & CREATE
+</span>
+
+<h2>
+What you'll learn
+</h2>
+
+<p>
+Simple techniques that can completely change the way
+your photos look.
+</p>
+
+</div>
+
+
+
+<div class="learn-grid">
+
+
+<div class="learn-card">
+
+<div class="learn-number">
+01
+</div>
+
+<h3>
+Camera Settings
+</h3>
+
+<p>
+Understand focus, exposure, resolution, lenses and the most
+important phone camera settings.
+</p>
+
+</div>
+
+
+
+<div class="learn-card">
+
+<div class="learn-number">
+02
+</div>
+
+<h3>
+Lighting
+</h3>
+
+<p>
+Learn how to use window light, shadows and simple lighting
+techniques to improve your photos.
+</p>
+
+</div>
+
+
+
+<div class="learn-card">
+
+<div class="learn-number">
+03
+</div>
+
+<h3>
+Composition
+</h3>
+
+<p>
+Learn how to arrange your frame and make your photos look
+balanced, clean and professional.
+</p>
+
+</div>
+
+
+
+<div class="learn-card">
+
+<div class="learn-number">
+04
+</div>
+
+<h3>
+Angles
+</h3>
+
+<p>
+Discover how different camera angles can completely change
+the feeling and appearance of a photo.
+</p>
+
+</div>
+
+
+
+<div class="learn-card">
+
+<div class="learn-number">
+05
+</div>
+
+<h3>
+Editing
+</h3>
+
+<p>
+Build a simple editing workflow to enhance your images
+while keeping them natural.
+</p>
+
+</div>
+
+
+
+<div class="learn-card">
+
+<div class="learn-number">
+06
+</div>
+
+<h3>
+AI Photography
+</h3>
+
+<p>
+Learn how AI can help you remove objects, change backgrounds,
+improve images and create more content.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WHO IS IT FOR -->
+
+<section class="audience-section">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<span>
+MADE FOR YOU
+</span>
+
+<h2>
+Who is this guide for?
+</h2>
+
+</div>
+
+
+<div class="audience-grid">
+
+
+<div class="audience-card">
+
+<div class="audience-icon">
+♡
+</div>
+
+<h4>
+Beginners
+</h4>
+
+<p>
+Perfect if you're just starting your photography journey.
+</p>
+
+</div>
+
+
+<div class="audience-card">
+
+<div class="audience-icon">
+◇
+</div>
+
+<h4>
+Content Creators
+</h4>
+
+<p>
+Create better-looking content for social media.
+</p>
+
+</div>
+
+
+<div class="audience-card">
+
+<div class="audience-icon">
+✦
+</div>
+
+<h4>
+Small Businesses
+</h4>
+
+<p>
+Take professional-looking product photos without expensive equipment.
+</p>
+
+</div>
+
+
+<div class="audience-card">
+
+<div class="audience-icon">
+○
+</div>
+
+<h4>
+Everyday Creatives
+</h4>
+
+<p>
+Capture beautiful everyday moments using your phone.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- DIGITAL DOWNLOAD -->
+
+<section class="download-section">
+
+<div class="container">
+
+
+<h2>
+Start creating better photos today.
+</h2>
+
+
+<p>
+Download the guide and start improving your photography using
+simple techniques, practical examples and the phone you already own.
+</p>
+
+
+<a
+href="#"
+class="download-btn"
+>
+GET THE GUIDE — AED 49
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section class="faq-section">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<span>
+QUESTIONS
+</span>
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+</div>
+
+
+
+<div class="faq-list">
+
+
+<details>
+
+<summary>
+Is this a physical book?
+</summary>
+
+<p>
+No. This is a digital ebook. No physical product will be shipped.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+How will I receive the guide?
+</summary>
+
+<p>
+The guide will be delivered electronically after your purchase
+is completed.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Do I need a professional camera?
+</summary>
+
+<p>
+No. The guide is designed specifically for mobile photography.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Is the guide suitable for beginners?
+</summary>
+
+<p>
+Yes. The guide explains mobile photography in a simple,
+practical and beginner-friendly way.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I share the ebook with others?
+</summary>
+
+<p>
+The ebook is for personal use only and may not be redistributed,
+resold or shared.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I request a refund?
+</summary>
+
+<p>
+Due to the nature of digital products, purchases are generally
+non-refundable once the digital product has been delivered or accessed.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- HELP / WHATSAPP -->
+
+<section class="help-section">
+
+<div class="container">
+
+
+<h2>
+Have a question?
+</h2>
+
+
+<p>
+We're happy to help with any questions about the guide.
+</p>
+
+
+<a
+href="https://wa.me/971544607998?text=Hello%20BY%20HAMDA%2C%20I%20have%20a%20question%20about%20the%20Mobile%20Photography%20Guide."
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp-btn"
+>
+Chat with us on WhatsApp
+</a>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 BY HAMDA. All rights reserved.
+</footer>
+
+
+</body>
+
+</html>
